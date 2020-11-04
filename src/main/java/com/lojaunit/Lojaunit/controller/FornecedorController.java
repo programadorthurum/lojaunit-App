@@ -25,7 +25,7 @@ public class FornecedorController {
 	private FornecedorRepository fornecedoRepository;
 
 	@PostMapping(path = "/add") // Map ONLY POST Requests
-	public @ResponseBody String addNewFornecedor(@RequestParam String nome, @RequestParam String telefone,
+	public @ResponseBody String addNewFornecedor(@RequestParam String nome, @RequestParam String endereco , @RequestParam String telefone,
 			@RequestParam Integer cnpj, @RequestParam String email) {
 
 		// @ResponseBody means the returned String is the response, not a view name
@@ -33,6 +33,7 @@ public class FornecedorController {
 
 		Fornecedor forn = new Fornecedor();
 		forn.setNome(nome);
+		forn.setEndereco(endereco);
 		forn.setTelefone(telefone);
 		forn.setCnpj(cnpj);
 		forn.setEmail(email);
@@ -43,13 +44,14 @@ public class FornecedorController {
 	}
 
 	@PutMapping(path = "/alterar/{id}")
-	public @ResponseBody String alterarFornecedor(@RequestParam String nome, @RequestParam String telefone,
+	public @ResponseBody String alterarFornecedor(@RequestParam String nome, @RequestParam String endereco, @RequestParam String telefone,
 			@RequestParam Integer cnpj, @RequestParam String email, @PathVariable("id") Integer id) {
 
 		if (fornecedoRepository.existsById(id)) {
 			Fornecedor forn = new Fornecedor();
 			forn.setId(id);
 			forn.setNome(nome);
+			forn.setEndereco(endereco);
 			forn.setTelefone(telefone);
 			forn.setCnpj(cnpj);
 			forn.setEmail(email);
