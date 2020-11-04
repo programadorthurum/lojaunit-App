@@ -11,11 +11,21 @@ import javax.persistence.Table;
 public class Fornecedor {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
+	private String endereco;
 	private String telefone;
 	private Integer cnpj;
+	
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
 	private String email;
 
 	public Integer getId() {
