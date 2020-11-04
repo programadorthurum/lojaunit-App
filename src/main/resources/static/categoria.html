@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>LOJA UNIT - CATEGORIA</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<div>
+		<form action="http://localhost:8080/categoria/add"
+			method="POST">
+			Nome da Categoria: <input type="text" name="nome" required="required" /><br /> 
+			Ativo: <input type="text" name="ativo" required="required" /><br /> 
+			<input type="submit" value="Salvar Categoria">
+
+		</form>
+	</div>
+
+	</br>
+
+	<div>
+		<form action="http://localhost:8080/categoria/consultar" method="GET">
+			Id: <input type="text" name="id" required="required" /><br /> 
+			<input type="submit" value="Consultar Categoria">
+
+		</form>
+	</div>
+
+	</br>
+
+	<div>
+		<form action="http://localhost:8080/categoria/alterar" method="post">
+		<input type="hidden" name="method" value="put"/>
+			Id: <input type="text" name="id" required="required" /><br /> 
+			Nome da Categoria: <input type="text" name="nome" required="required" /><br /> 
+			Ativo: <input type="text" name="ativo" required="required" /><br /> 
+			<input type="submit" value="Alterar Categoria">
+
+		</form>
+	</div>
+
+
+	</br>
+
+
+	<div>
+		<form action="http://localhost:8080/categoria/alterar_nome"  method="POST">
+		<input type="hidden" name="_method" value="put"/>
+			Id: <input type="text" name="id" required="required" /><br />
+			Nome: <input type="text" name="nome" required="required" /><br /> 
+			<input type="submit" value="Alterar Nome Categoria">
+
+		</form>
+	</div>
+
+
+	</br>
+
+
+	<div>
+		<form action="http://localhost:8080/categoria/remover" method="POST">
+			<input type="hidden" name="_method" value="DELETE"/>
+			Id: <input type="text" name="id" required="required" /><br /> 
+			<input type="submit" value="Remover Categoria">
+
+		</form>
+	</div>
+
+	<div>
+		<form action="http://localhost:8080/categoria/listar" method="GET">
+		<input type="submit" value="Listar Categoria">
+
+		</form>
+	</div>
+</body>
+</html>

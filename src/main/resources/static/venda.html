@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>LOJA UNIT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<div>
+	<p>
+
+		<form action="http://localhost:8080/venda/add?" method="POST">
+			Id: <input type="text" name="id_cliente" required="required" /><br />
+			Data Hora: <input type="text" name="data_hora" required="required" /><br /> 
+			Valor Total: <input type="text" name="valor_total" required="required" /><br /> 
+			<input type="submit" value="Salvar" />
+		 </form>
+
+	</p>
+</div>
+
+</br>
+
+<div>
+		<form action="http://localhost:8080/venda/consultar" method="GET">
+			Id: <input type="text" name="id" required="required" /><br /> 
+			<input type="submit" value="Consultar faq">
+
+		</form>
+</div>
+
+	</br>
+
+<div>
+		<form action="http://localhost:8080/venda/alterar" method="post">
+		<input type="hidden" name="method" value="put"/>
+			Id: <input type="text" name="id" required="required" /><br />
+			Forma de Pagamento: <input type="text" name="forma" required="required" /><br /> 
+			Descrição: <input type="text" name="descricao" required="required" /><br /> 
+			Ativo: <input type="text" name="ativo" required="required" /><br /> 
+			<input type="submit" value="Alterar faq">
+
+		</form>
+</div>
+
+
+	</br>
+
+
+<div>
+		<form action="http://localhost:8080/venda/remover" method="POST">
+			<input type="hidden" name="_method" value="DELETE"/>
+			Id: <input type="text" name="id" required="required" /><br /> 
+			<input type="submit" value="Remover faq">
+
+		</form>
+</div>
+		<p>
+		<a href="menu.html">Voltar</a></li>
+
+</body>
+</html>
+

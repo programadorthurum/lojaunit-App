@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>LOJA UNIT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<div>
+	<p>
+
+		<form action="http://localhost:8080/itens_venda/add?" method="POST">
+			Id Produto: <input type="text" name="id_produto" required="required" /><br />
+			Id Venda: <input type="text" name="id_venda" required="required" /><br />  
+			Quantidade: <input type="text" name="quantidade" required="required" /><br /> 
+			Valor Unitario: <input type="text" name="valor_unitario" required="required" /><br /> 
+		 <input type="submit" value="Salvar" />
+		 </form>
+
+	</p>
+</div>
+
+</br>
+
+<div>
+		<form action="http://localhost:8080/itens_venda/consultar" method="GET">
+			Id: <input type="text" name="id" required="required" /><br /> 
+			<input type="submit" value="Consultar faq">
+
+		</form>
+</div>
+
+	</br>
+
+<div>
+		<form action="http://localhost:8080/itens_venda/alterar" method="post">
+		<input type="hidden" name="method" value="put"/>
+			Id Produto: <input type="text" name="id_produto" required="required" /><br />
+			Id Venda: <input type="text" name="id_venda" required="required" /><br />  
+			Quantidade: <input type="text" name="quantidade" required="required" /><br /> 
+			Valor Unitario: <input type="text" name="valor_unitario" required="required" /><br /> 
+
+
+		</form>
+</div>
+
+
+	</br>
+
+
+<div>
+		<form action="http://localhost:8080/itens_venda/remover" method="POST">
+			<input type="hidden" name="_method" value="DELETE"/>
+			Id: <input type="text" name="id" required="required" /><br /> 
+			<input type="submit" value="Remover faq">
+
+		</form>
+</div>
+		<p>
+		<a href="menu.html">Voltar</a></li>
+
+</body>
+</html>
+

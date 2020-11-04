@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>LOJA UNIT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<div>
+	<p>
+
+		<form action="http://localhost:8080/produto/add?" method="POST">
+			Nome: <input type="text" name="nome" required="required" /><br /> 
+			Preço: <input type="text" name="preco_unitario" required="required" /><br />
+			Id Fornecedor: <input type="text" name="id_fornecedor" required="required" /><br />
+			Id Categoria: <input type="text" name="id_categoria" required="required" /><br />
+			Id Marca: <input type="text" name="id_marca" required="required" /><br /> 
+			Unidade: <input type="text" name="unidade" required="required" /><br /> 
+			Descrição: <input type="text" name="descricao" required="required" /><br /> 
+			
+		 <input type="submit" value="Salvar" />
+		 </form>
+
+	</p>
+</div>
+
+</br>
+
+<div>
+		<form action="http://localhost:8080/produto/consultar" method="GET">
+			Id: <input type="text" name="id" required="required" /><br /> 
+			<input type="submit" value="Consultar faq">
+
+		</form>
+</div>
+
+	</br>
+
+<div>
+		<form action="http://localhost:8080/produto/alterar" method="post">
+		<input type="hidden" name="method" value="put"/>
+			Nome: <input type="text" name="nome" required="required" /><br /> 
+			Preço: <input type="text" name="preco_unitario" required="required" /><br />
+			Id Fornecedor: <input type="text" name="id_fornecedor" required="required" /><br />
+			Id Categoria: <input type="text" name="id_categoria" required="required" /><br />
+			Id Marca: <input type="text" name="id_marca" required="required" /><br /> 
+			Unidade: <input type="text" name="unidade" required="required" /><br /> 
+			Descrição: <input type="text" name="descricao" required="required" /><br /> 
+
+		</form>
+</div>
+
+
+	</br>
+
+
+<div>
+		<form action="http://localhost:8080/produto/remover" method="POST">
+			<input type="hidden" name="_method" value="DELETE"/>
+			Id: <input type="text" name="id" required="required" /><br /> 
+			<input type="submit" value="Remover faq">
+
+		</form>
+</div>
+		<p>
+		<a href="menu.html">Voltar</a></li>
+
+</body>
+</html>
+

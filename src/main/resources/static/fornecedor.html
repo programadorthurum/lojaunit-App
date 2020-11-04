@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>LOJA UNIT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<div>
+	<p>
+
+		<form action="http://localhost:8080/fornecedor/add?" method="POST">
+			nome: <input type="text" name="nome" required="required" /><br /> 
+			Telefone: <input type="text" name="telefone" required="required" /><br /> 
+			CNPJ: <input type="text" name="cnpj" required="required" /><br />
+			E-MAIL: <input type="text" name="email" required="required" /><br /> 
+		 <input type="submit" value="Salvar" />
+		 </form>
+
+	</p>
+</div>
+
+</br>
+
+<div>
+		<form action="http://localhost:8080/fornecedor/consultar" method="GET">
+			Id: <input type="text" name="id" required="required" /><br /> 
+			<input type="submit" value="Consultar Fornecedor">
+
+		</form>
+</div>
+
+	</br>
+
+<div>
+		<form action="http://localhost:8080/fornecedor/alterar" method="post">
+		<input type="hidden" name="method" value="put"/>
+			Id: <input type="text" name="id" required="required" /><br />
+			nome: <input type="text" name="nome" required="required" /><br /> 
+			Telefone: <input type="text" name="telefone" required="required" /><br /> 
+			CNPJ: <input type="text" name="cnpj" required="required" /><br />
+			E-MAIL: <input type="text" name="email" required="required" /><br />  
+			<input type="submit" value="Alterar Fornecedor">
+
+		</form>
+</div>
+
+
+	</br>
+
+
+<div>
+		<form action="http://localhost:8080/fornecedor/remover" method="POST">
+			<input type="hidden" name="_method" value="DELETE"/>
+			Id: <input type="text" name="id" required="required" /><br /> 
+			<input type="submit" value="Remover Fornecedor">
+
+		</form>
+</div>
+		<p>
+		<a href="fornecedor_menu.html">Voltar</a></li>
+
+</body>
+</html>
+
